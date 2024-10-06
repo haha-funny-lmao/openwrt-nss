@@ -1,0 +1,16 @@
+Index: linux-6.6.54/arch/arm64/boot/dts/qcom/ipq6018.dtsi
+===================================================================
+--- linux-6.6.54.orig/arch/arm64/boot/dts/qcom/ipq6018.dtsi
++++ linux-6.6.54/arch/arm64/boot/dts/qcom/ipq6018.dtsi
+@@ -209,6 +209,11 @@
+ 			no-map;
+ 		};
+ 
++		nss_region: nss@40000000 {
++			no-map;
++			reg = <0x0 0x40000000 0x0 0x01000000>;
++		};
++
+ 		tz: memory@4a600000 {
+ 			reg = <0x0 0x4a600000 0x0 0x400000>;
+ 			no-map;
