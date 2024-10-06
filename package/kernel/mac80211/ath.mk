@@ -375,7 +375,8 @@ define KernelPackage/ath11k/config
                	 TARGET_qualcommax_ipq807x_DEVICE_linksys_mx4200v1 || \
                	 TARGET_qualcommax_ipq807x_DEVICE_redmi_ax6 || \
                	 TARGET_qualcommax_ipq807x_DEVICE_xiaomi_ax3600 || \
-               	 TARGET_qualcommax_ipq807x_DEVICE_zte_mf269 )
+               	 TARGET_qualcommax_ipq807x_DEVICE_zte_mf269 || \
+		 TARGET_qualcommax_ipq60xx_DEVICE_jdcloud_ax1800-pro )
                select ATH11K_MEM_PROFILE_256M if TARGET_qualcommax_ipq807x_DEVICE_netgear_wax218
                default y
                help
