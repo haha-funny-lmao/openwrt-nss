@@ -61,7 +61,7 @@ define Device/jdcloud_ax1800-pro
 	BLOCKSIZE := 64k
 	KERNEL_SIZE := 6144k
 	DEVICE_DTS_CONFIG := config@cp03-c2
-	DEVICE_PACKAGES := ipq-wifi-jdcloud_ax1800pro
+	DEVICE_PACKAGES := ipq-wifi-jdcloud_ax1800pro kmod-fs-ext4 mkf2fs f2fsck kmod-fs-f2fs block-mount
 	IMAGE/factory.bin := append-kernel | pad-to $${KERNEL_SIZE} | append-rootfs | append-metadata
 endef
 TARGET_DEVICES += jdcloud_ax1800-pro

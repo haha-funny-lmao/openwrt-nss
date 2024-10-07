@@ -15,15 +15,20 @@
 
 	aliases {
 		serial0 = &blsp1_uart3;
-		led-boot = &led_status_green;
+		led-boot = &led_status_blue;
 		led-failsafe = &led_status_red;
-		led-running = &led_status_blue;
+		led-running = &led_status_green;
 		led-upgrade = &led_status_red;
 
 		ethernet1 = "/soc/dp2";
 		ethernet2 = "/soc/dp3";
 		ethernet3 = "/soc/dp4";
 		ethernet4 = "/soc/dp5";
+	};
+
+	chosen {
+		stdout-path = "serial0:115200n8";
+		bootargs-append = " rootfstype=squashfs,ext4 coherent_pool=2M swiotlb=noforce";
 	};
 
 	keys {
